@@ -45,7 +45,7 @@
 
         <div class="center">
             <section id="content">
-                <h2>Últimos artículos</h2>
+                <h2 class="subHeader">Últimos artículos</h2>
 
                 <script type="text/javascript"> 
                     // Se annaden 5 ejemplos de articulos para maquetacion
@@ -56,7 +56,7 @@
                             let clon = template.cloneNode(true);
                             clon.removeAttribute("id");
                             let h2 = clon.getElementsByTagName("h2")[0];
-                            h2.innerHTML = h2.textContent + ' Parte ' + (i + 1);
+                            h2.innerHTML = h2.textContent + ' - Parte ' + (i + 1);
                             listArt.appendChild(clon);
                         }
                     });
@@ -71,6 +71,7 @@
                         <h2>Pokédex una herramienta poderosa</h2>
                         <span class="date">Hace 30 minutos</span>
                         <a href="#">Ir al artículo</a>
+                        <div class="clearfix"></div>
                     </article>
                 </div>
 
