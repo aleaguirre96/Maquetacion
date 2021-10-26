@@ -46,7 +46,36 @@
         <div class="center">
             <section id="content">
                 <h2>Últimos artículos</h2>
-                <!---->
+
+                <script type="text/javascript"> 
+                    // Se annaden 5 ejemplos de articulos para maquetacion
+                    window.addEventListener("load", () => {
+                        var template = document.getElementById("templateArticle");
+                        var listArt = document.getElementById("articles");
+                        for(let i = 1; i <= 5 ; i++) {
+                            let clon = template.cloneNode(true);
+                            clon.removeAttribute("id");
+                            let h2 = clon.getElementsByTagName("h2")[0];
+                            h2.innerHTML = h2.textContent + ' Parte ' + (i + 1);
+                            listArt.appendChild(clon);
+                        }
+                    });
+                </script>
+
+                <div id="articles">
+                    <!--Lista de articulos-->
+                    <article class="article-item" id="templateArticle">
+                        <div class="image-wrap">
+                            <img src="assets/images/Pokédex_GenI_Kanto.png" alt="pokedex canto">
+                        </div>
+                        <h2>Pokédex una herramienta poderosa</h2>
+                        <span class="date">Hace 30 minutos</span>
+                        <a href="#">Ir al artículo</a>
+                    </article>
+                </div>
+
+ 
+
             </section>
             <aside id="sidebar">
                 <div id="nav-blog" class="sidebar-item">
